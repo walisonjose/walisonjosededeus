@@ -10,56 +10,56 @@ function Timeline() {
   return (
     <div id="history">
       <div className="items-container">
-        <h1>Career History</h1>
+        <h1>Carreira</h1>
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
+            date="2021 - present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
+            <h3 className="vertical-timeline-element-title">Fidela Solutions</h3>
+            <h4 className="vertical-timeline-element-subtitle">Remoto</h4>
             <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
+            Desenvolvedor Full Stack com foco em React e React Native, atuando no desenvolvimento de soluções de fidelização e engajamento de usuários (Acessa Agro e Deu Cash).
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
+            date="2019 - 2021"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Diretoria de Inovação - Prefeitura de Aparecida de Goiânia</h3>
+            <h4 className="vertical-timeline-element-subtitle">Aparecida de Goiânia - GO</h4>
             <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
+            Atuando na implantação do projeto Siga, voltado para mobilidade urbana. Atuando com React Native e Expo no front-end e Ruby on Rails no back-end.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
+            date="2015 - 2019"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Projeto Tainacan - Media Lab/UFG</h3>
+            <h4 className="vertical-timeline-element-subtitle">Goiânia - GO</h4>
             <p>
-              Full-stack Development, API Development, User Experience
-            </p>
+            SysAdmin Linux no Media Lab/UFG, participando do projeto Tainacan,
+             atuando com a configuração e manutenção de infraestrutura e também com suporte e treinamento de usuários.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2020"
+            date="2007 - 2012"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
+            <h3 className="vertical-timeline-element-title">Bacharelado em Informática, IFG.</h3>
+            <h4 className="vertical-timeline-element-subtitle">Inhumas, Goiás</h4>
             <p>
-              Automation, Data Governance, Statistical Analysis
+              Graduação.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
