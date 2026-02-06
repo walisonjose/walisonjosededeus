@@ -1,86 +1,76 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
+import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
-import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
-const labelsFirst = [
-    "React",
-    "React Native",
-    "JavaScript",
-    "Expo EAS",
-    "Expo",
-    "Android Nativo",
-    "JSX"
-];
+type SkillCard = {
+    title: string;
+    subtitle: string;
+    description: string;
+    tags: string[];
+    icon: typeof faReact;
+    accent: string;
+};
 
-const labelsSecond = [
-    "Docker",
-    "Firebase",
-    "Kurbenetes",
-    "Bacula",
-    "CPG",
-    "Linux",
-    "Ispconfig",
-    "cPanel",
-];
-
-const labelsThird = [
-    "Salesforce",
-    "JADE",
-    "NodeJS",
-    "Ruby on Rails",
-    "Laravel",
-    "Java",
-    "LLMs",
+const skills: SkillCard[] = [
+    {
+        title: "React Native & Web",
+        subtitle: "Apps mobile e portais",
+        description: "7+ anos com React Native e React entregando produtos performáticos, acessíveis e preparados para escala.",
+        tags: ["React Native", "React", "JavaScript", "TypeScript", "Expo", "Java"],
+        icon: faReact,
+        accent: "#38bdf8",
+    },
+    {
+        title: "Infra & Linux",
+        subtitle: "SysAdmin e observabilidade",
+        description: "3+ anos administrando Linux, deploy de serviços e otimização de ambientes para disponibilidade e segurança.",
+        tags: ["Linux", "Docker", "Nginx/Apache", "Monitoramento", "CI/CD", "Shell"],
+        icon: faDocker,
+        accent: "#22d3ee",
+    },
+    {
+        title: "Loyalty & Sustentação",
+        subtitle: "Estabilidade e performance",
+        description: "Atuação diária em diagnóstico e correção de bugs, hardening de performance e melhoria contínua em produtos de loyalty.",
+        tags: ["Loyalty", "Bugfix", "Performance", "Observabilidade", "Suporte", "Melhoria contínua"],
+        icon: faPython,
+        accent: "#a3e635",
+    },
 ];
 
 function Expertise() {
     return (
-    <div className="container" id="expertise">
-        <div className="skills-container">
-            <h1>Skills</h1>
-            <div className="skills-grid">
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Desenvolvedor Full Stack</h3>
-                    <p>Tenho vasta experiência com a stack React e React Native, atuando no desenvolvimento e manutenção de projetos, com foco em entregar soluções escaláveis e de alta qualidade.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title"></span>
-                        {labelsFirst.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>Infra</h3>
-                    <p>No contexto de infraestrutura, possuo conhecimentos em diversas ferramentas consagradas, voltadas para configuração, manutenção e disponibilidade de serviços, aplicáveis a diferentes tipos de aplicações.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title"></span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>Outras Ferramentas</h3>
-                    <p>Experiência com Salesforce, NodeJS, Ruby on Rails e Laravel para desenvolvimento de soluções personalizadas e back-end robusto.</p>
-                    <br/> <br/>
-                    <div className="flex-chips">
-                        <span className="chip-title"></span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+        <section className="expertise-section" id="expertise">
+            <div className="expertise-header">
+                <span className="eyebrow">Skills</span>
+                {/* <div>
+                    <h1>Stack e especialidades</h1>
+                    {/* <p>Loyalty, mobile, web e infra: sustentação, performance e produtos prontos para o negócio.</p> 
+                </div> */}
             </div>
-        </div>
-    </div>
+
+            <div className="skills-grid">
+                {skills.map((skill) => (
+                    <article className="skill-card" key={skill.title} style={{ ['--accent' as string]: skill.accent }}>
+                        <div className="icon-badge">
+                            <FontAwesomeIcon icon={skill.icon} size="2x" />
+                        </div>
+                        <div className="skill-copy">
+                            <h3>{skill.title}</h3>
+                            <h4>{skill.subtitle}</h4>
+                            <p>{skill.description}</p>
+                        </div>
+                        <div className="pill-row">
+                            {skill.tags.map((tag) => (
+                                <span className="pill" key={tag}>{tag}</span>
+                            ))}
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </section>
     );
 }
 

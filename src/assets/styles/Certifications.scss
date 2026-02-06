@@ -1,0 +1,111 @@
+.cert-section {
+  position: relative;
+  padding: 80px 10vw;
+  background: radial-gradient(circle at 12% 20%, rgba(56, 189, 248, 0.12), transparent 32%),
+              radial-gradient(circle at 88% 10%, rgba(94, 234, 212, 0.12), transparent 30%),
+              linear-gradient(135deg, #0b1220 0%, #0f172a 100%);
+  color: #e2e8f0;
+  overflow: hidden;
+}
+
+.cert-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 70px 70px;
+  pointer-events: none;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.55), transparent 70%);
+}
+
+.cert-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.cert-header h1 {
+  margin: 6px 0 8px;
+  font-size: clamp(26px, 3vw, 38px);
+  color: #f8fafc;
+}
+
+.cert-header p {
+  margin: 0;
+  max-width: 520px;
+  color: #cbd5e1;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: #a5f3fc;
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.cert-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.cert-card {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 18px 60px rgba(8, 47, 73, 0.4);
+}
+
+.cert-card h3 {
+  margin: 0 0 10px;
+  color: #f8fafc;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.18);
+  color: #e2e8f0;
+  font-size: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+@media (max-width: 640px) {
+  .cert-section {
+    padding: 64px 18px;
+  }
+}

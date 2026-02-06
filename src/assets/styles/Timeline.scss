@@ -1,38 +1,166 @@
-.vertical-timeline span {
-    color: white;
-    font-family: 'Courier Prime', monospace;
+.timeline-section {
+    position: relative;
+    padding: 96px 10vw;
+    background: radial-gradient(circle at 10% 30%, rgba(56, 189, 248, 0.14), transparent 32%),
+                radial-gradient(circle at 90% 20%, rgba(94, 234, 212, 0.12), transparent 30%),
+                linear-gradient(135deg, #0b1220 0%, #0f172a 100%);
+    color: #e2e8f0;
+    overflow: hidden;
 }
 
-.vertical-timeline p {
-    color: rgb(39, 40, 34);
+.timeline-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.55), transparent 70%);
 }
 
-.vertical-timeline-element p {
-    color: rgb(39, 40, 34);
+.timeline-header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
-.vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
+.timeline-header h1 {
+    margin: 6px 0 8px;
+    font-size: clamp(28px, 3vw, 42px);
+    color: #f8fafc;
 }
 
-.vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
+.timeline-header p {
+    margin: 0;
+    max-width: 520px;
+    color: #cbd5e1;
 }
 
-.vertical-timeline-element span {
-    color: rgb(39, 40, 34);
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 12px;
+    color: #a5f3fc;
+    background: rgba(14, 165, 233, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.35);
 }
 
-.vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
+.vertical-timeline::before {
+    background: linear-gradient(180deg, rgba(56, 189, 248, 0.4), rgba(56, 189, 248, 0.05));
+    width: 4px;
+}
+
+.timeline-card .vertical-timeline-element-content {
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: #e2e8f0 !important;
+    border: 1px solid rgba(148, 163, 184, 0.25) !important;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.35) !important;
+    border-radius: 16px !important;
+    padding: 18px 20px !important;
+    backdrop-filter: blur(10px);
+}
+
+.timeline-card__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.timeline-card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #f8fafc;
+}
+
+.timeline-card h4 {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #a5b4c3;
+    font-weight: 600;
+}
+
+.timeline-card p {
+    margin: 10px 0;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    color: #0b1220;
+    background: #e0f2fe;
+    font-weight: 700;
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.2);
+    color: #e2e8f0;
+    font-size: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.vertical-timeline-element-date {
+    color: #cbd5e1 !important;
+    font-weight: 700;
+}
+
+.vertical-timeline-element-icon {
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25) !important;
 }
 
 .svg-inline--fa {
-    color: white;
+    color: #0b1220;
 }
 
-@media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
+@media (max-width: 900px) {
+    .timeline-section {
+        padding: 72px 6vw;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline-section {
+        padding: 60px 18px;
+    }
+
+    .timeline-card__head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .vertical-timeline-element-date {
+        color: #e2e8f0 !important;
     }
 }

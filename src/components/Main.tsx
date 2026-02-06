@@ -4,28 +4,43 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../assets/styles/Main.scss';
 
 function Main() {
-
   return (
-    <div className="container">
-      <div className="about-section">
-        <div className="image-wrapper">
-          <img src="https://avatars.githubusercontent.com/u/11925691?s=400&u=485d09278292ea5abab71f7b838da6ae731b17b3&v=4" alt="Avatar" />
-        </div>
-        <div className="content">
-          <div className="social_icons">
-            <a href="https://github.com/walisonjose" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/walisonjosededeus/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-          </div>
+    <section className="hero">
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <div className="eyebrow">React Native · Loyalty</div>
           <h1>Walison J. Deus</h1>
-          <p>Desenvolvedor React & React Native</p>
+          <p className="lede">Mais de 4 anos sustentando e evoluindo produtos de loyalty, mobile e web. Atuo em diagnóstico e correção de bugs, performance e melhorias contínuas para manter estabilidade e alinhamento ao negócio.</p>
 
-          <div className="mobile_social_icons">
-            <a href="https://github.com/walisonjose" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/walisonjosededeus/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+          <div className="hero-meta">
+            {/* <span className="badge">Palmas · Tocantins · Brasil</span> */}
+            <span className="badge">React Native · 7+ anos</span>
+            <span className="badge">SysAdmin Linux · 3+ anos</span>
           </div>
+
+          {/* <div className="hero-actions">
+            <a className="btn primary" href="#projects">Ver projetos</a>
+            <a className="btn ghost" href="https://www.linkedin.com/in/walisonjosededeus/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div> */}
+
+          <div className="social-row">
+            <a href="https://github.com/walisonjose" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <GitHubIcon />
+            </a>
+            <a href="https://www.linkedin.com/in/walisonjosededeus/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <LinkedInIcon />
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-figure">
+          <div className="avatar-ring">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFfG7olI6031w/profile-displayphoto-scale_200_200/B4DZqZqVr_KIAg-/0/1763514605096?e=1770854400&v=beta&t=peQ-wrjba8Ngb1Lx8-OxBkCRkVbX9VVPqeak486qE2w" alt="Walison J. Deus" />
+          </div>
+          <div className="glow" aria-hidden="true" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

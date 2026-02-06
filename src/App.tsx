@@ -7,6 +7,9 @@ import {
   Contact,
   Navigation,
   Footer,
+    Certifications,
+    Achievements,
+    CTDIESummary,
 } from "./components";
 import FadeIn from './components/FadeIn';
 import './index.scss';
@@ -32,6 +35,9 @@ function App() {
         <FadeIn transitionDuration={700}>
             <Main/>
             <Expertise/>
+            <Certifications/>
+            <Achievements/>
+            {/* <CTDIESummary/> */}
             <Timeline/>
             <Project/>
             {/* <Contact/> */}

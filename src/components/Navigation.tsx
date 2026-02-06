@@ -15,9 +15,18 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import '../assets/styles/Navigation.scss';
 
-const drawerWidth = 240;
-const navItems = [['Skills', 'expertise'], ['Carreira', 'history'], ['Projetos', 'projects']];
+const drawerWidth = 260;
+const navItems = [
+  ['Skills', 'expertise'],
+  // ['Certificações', 'certifications'],
+  // ['Honors', 'honors'],
+  // ['CTD-IE', 'ctdie'],
+  ['Carreira', 'history'],
+  ['Projetos', 'projects'],
+];
 
 function Navigation({parentToChild, modeChange}: any) {
 
@@ -47,19 +56,20 @@ function Navigation({parentToChild, modeChange}: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section)
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
-    } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+    if (section === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    const target = document.getElementById(section);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const drawer = (
-    <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <p className="mobile-menu-top"><ListIcon/>Menu</p>
+    <Box className="nav-drawer" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <p className="mobile-menu-top"><ListIcon/>Navegação</p>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -69,6 +79,11 @@ function Navigation({parentToChild, modeChange}: any) {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem disablePadding>
+          <ListItemButton component="a" href="https://www.linkedin.com/in/walisonjosededeus/" target="_blank" sx={{ textAlign: 'center' }}>
+            <ListItemText primary="LinkedIn" />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
@@ -76,29 +91,39 @@ function Navigation({parentToChild, modeChange}: any) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}>
+      <AppBar component="nav" elevation={0} id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}>
         <Toolbar className='navigation-bar'>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
-          ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
-          )}
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <div className="nav-brand" onClick={() => scrollToSection('top')} role="button" aria-label="Voltar ao topo">
+            <HomeRoundedIcon className="home-icon" fontSize="small" />
+           
+          </div>
+
+          <Box className="nav-links" sx={{ display: { xs: 'none', sm: 'flex' } }}>
             {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
+              <Button key={item[0]} onClick={() => scrollToSection(item[1])} className="nav-btn">
                 {item[0]}
               </Button>
             ))}
           </Box>
+
+          <div className="nav-actions">
+            {/* <IconButton className="mode-toggle" onClick={() => modeChange()} aria-label="Alternar tema">
+              {mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
+            </IconButton> */}
+            {/* <Button className="nav-cta" href="https://www.linkedin.com/in/walisonjosededeus/" target="_blank" rel="noreferrer">
+              LinkedIn
+            </Button> */}
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              className="menu-toggle"
+              sx={{ display: { sm: 'none' } }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
       <nav>
