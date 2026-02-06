@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/walisonjosededeus/static/css/main.1d3e6ea6.css",
-    "main.js": "/walisonjosededeus/static/js/main.f5ad24a2.js",
+    "main.css": "/walisonjosededeus/static/css/main.5cd2edaa.css",
+    "main.js": "/walisonjosededeus/static/js/main.1579a81c.js",
     "static/js/453.b05d8aa5.chunk.js": "/walisonjosededeus/static/js/453.b05d8aa5.chunk.js",
     "static/media/bg-light.png": "/walisonjosededeus/static/media/bg-light.bac0efb485244a522981.png",
-    "static/media/bg-dark2.png": "/walisonjosededeus/static/media/bg-dark2.f420c6b8458af72de935.png",
     "static/media/ingoh.jpg": "/walisonjosededeus/static/media/ingoh.9614841316759eb13c13.jpg",
     "static/media/tainacan_project.jpg": "/walisonjosededeus/static/media/tainacan_project.879f103b747e1eeb5d62.jpg",
     "static/media/siga2.png": "/walisonjosededeus/static/media/siga2.7a5706ce96514f971a20.png",
     "index.html": "/walisonjosededeus/index.html",
-    "main.1d3e6ea6.css.map": "/walisonjosededeus/static/css/main.1d3e6ea6.css.map",
-    "main.f5ad24a2.js.map": "/walisonjosededeus/static/js/main.f5ad24a2.js.map",
+    "main.5cd2edaa.css.map": "/walisonjosededeus/static/css/main.5cd2edaa.css.map",
+    "main.1579a81c.js.map": "/walisonjosededeus/static/js/main.1579a81c.js.map",
     "453.b05d8aa5.chunk.js.map": "/walisonjosededeus/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d3e6ea6.css",
-    "static/js/main.f5ad24a2.js"
+    "static/css/main.5cd2edaa.css",
+    "static/js/main.1579a81c.js"
   ]
 }
