@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/walisonjosededeus/static/css/main.5cd2edaa.css",
-    "main.js": "/walisonjosededeus/static/js/main.1579a81c.js",
-    "static/js/453.b05d8aa5.chunk.js": "/walisonjosededeus/static/js/453.b05d8aa5.chunk.js",
+    "main.css": "/walisonjosededeus/static/css/main.bc4f221c.css",
+    "main.js": "/walisonjosededeus/static/js/main.83a80740.js",
+    "static/js/453.e7f01505.chunk.js": "/walisonjosededeus/static/js/453.e7f01505.chunk.js",
+    "static/media/profile.jpg": "/walisonjosededeus/static/media/profile.312eb0a6d37e01124aa4.jpg",
     "static/media/bg-light.png": "/walisonjosededeus/static/media/bg-light.bac0efb485244a522981.png",
     "static/media/ingoh.jpg": "/walisonjosededeus/static/media/ingoh.9614841316759eb13c13.jpg",
-    "static/media/tainacan_project.jpg": "/walisonjosededeus/static/media/tainacan_project.879f103b747e1eeb5d62.jpg",
     "static/media/siga2.png": "/walisonjosededeus/static/media/siga2.7a5706ce96514f971a20.png",
+    "static/media/clubegiro.png": "/walisonjosededeus/static/media/clubegiro.a0017220389bd49a7a89.png",
+    "static/media/tainacan_logo.svg": "/walisonjosededeus/static/media/tainacan_logo.58cc4cc029f0fb008c6f7d2d12984fdd.svg",
+    "static/media/acessa_agro.svg": "/walisonjosededeus/static/media/acessa_agro.b4532484e64abdfe3e14a2a0e19d91b1.svg",
     "index.html": "/walisonjosededeus/index.html",
-    "main.5cd2edaa.css.map": "/walisonjosededeus/static/css/main.5cd2edaa.css.map",
-    "main.1579a81c.js.map": "/walisonjosededeus/static/js/main.1579a81c.js.map",
-    "453.b05d8aa5.chunk.js.map": "/walisonjosededeus/static/js/453.b05d8aa5.chunk.js.map"
+    "main.bc4f221c.css.map": "/walisonjosededeus/static/css/main.bc4f221c.css.map",
+    "main.83a80740.js.map": "/walisonjosededeus/static/js/main.83a80740.js.map",
+    "453.e7f01505.chunk.js.map": "/walisonjosededeus/static/js/453.e7f01505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cd2edaa.css",
-    "static/js/main.1579a81c.js"
+    "static/css/main.bc4f221c.css",
+    "static/js/main.83a80740.js"
   ]
 }
