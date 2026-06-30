@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/walisonjosededeus/static/css/main.bc4f221c.css",
-    "main.js": "/walisonjosededeus/static/js/main.83a80740.js",
+    "main.js": "/walisonjosededeus/static/js/main.874be2a2.js",
     "static/js/453.e7f01505.chunk.js": "/walisonjosededeus/static/js/453.e7f01505.chunk.js",
     "static/media/profile.jpg": "/walisonjosededeus/static/media/profile.312eb0a6d37e01124aa4.jpg",
     "static/media/bg-light.png": "/walisonjosededeus/static/media/bg-light.bac0efb485244a522981.png",
@@ -12,11 +12,11 @@
     "static/media/acessa_agro.svg": "/walisonjosededeus/static/media/acessa_agro.b4532484e64abdfe3e14a2a0e19d91b1.svg",
     "index.html": "/walisonjosededeus/index.html",
     "main.bc4f221c.css.map": "/walisonjosededeus/static/css/main.bc4f221c.css.map",
-    "main.83a80740.js.map": "/walisonjosededeus/static/js/main.83a80740.js.map",
+    "main.874be2a2.js.map": "/walisonjosededeus/static/js/main.874be2a2.js.map",
     "453.e7f01505.chunk.js.map": "/walisonjosededeus/static/js/453.e7f01505.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc4f221c.css",
-    "static/js/main.83a80740.js"
+    "static/js/main.874be2a2.js"
   ]
 }
