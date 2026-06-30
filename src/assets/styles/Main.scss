@@ -250,7 +250,24 @@
     }
 
     .avatar-ring {
-        width: 394px;
-        height: 394px;
+        width: min(280px, 60vw);
+        height: min(280px, 60vw);
+    }
+
+    .glow {
+        width: min(240px, 65vw);
+        height: min(240px, 65vw);
+    }
+}
+
+@media (max-width: 380px) {
+    .avatar-ring {
+        width: min(280px, 55vw);
+        height: min(280px, 55vw);
+    }
+
+    .glow {
+        width: min(200px, 60vw);
+        height: min(200px, 60vw);
     }
 }
