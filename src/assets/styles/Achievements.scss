@@ -62,8 +62,6 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 18px;
-  max-width: 1080px;
-  margin: 0 auto;
 }
 
 .ach-card {
@@ -198,6 +196,33 @@
   color: #e2e8f0;
   font-size: 12px;
   border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.pill.pill-gold {
+  background: rgba(250, 204, 21, 0.14);
+  border-color: rgba(250, 204, 21, 0.45);
+  color: #fde68a;
+}
+
+.doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5eead4;
+  background: rgba(94, 234, 212, 0.1);
+  border: 1px solid rgba(94, 234, 212, 0.35);
+  text-decoration: none;
+  transition: background 150ms ease, border-color 150ms ease;
+
+  &:hover {
+    background: rgba(94, 234, 212, 0.2);
+    border-color: rgba(94, 234, 212, 0.6);
+  }
 }
 
 @media (max-width: 640px) {

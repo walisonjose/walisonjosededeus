@@ -1,48 +1,99 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
+.contact-section {
+  position: relative;
+  padding: 100px 10vw;
+  background: radial-gradient(circle at 50% 30%, rgba(56, 189, 248, 0.1), transparent 55%),
+              linear-gradient(135deg, #0b1220 0%, #0f172a 100%);
+  overflow: hidden;
+  text-align: center;
 }
 
-.contact-form {
-  padding-top: 20px;
-
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
-  }
-
-  button:hover {
-    background-color: #5000ca;
-    color: white;
-  }
-
-  fieldset {
-    background-color: white;
-  }
+.contact-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 70px 70px;
+  pointer-events: none;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.55), transparent 70%);
 }
 
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
-}
-
-.form-flex {
+.contact-inner {
+  position: relative;
+  z-index: 1;
   display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-.form-flex .MuiFormControl-root {
-  width: 100%;
+.contact-inner h1 {
+  margin: 4px 0 0;
+  font-size: clamp(32px, 4vw, 52px);
+  color: #f8fafc;
 }
 
-form {
-  width: 100% !important;
+.contact-inner > p {
+  margin: 0;
+  max-width: 480px;
+  color: #94a3b8;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+.contact-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.contact-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease, color 150ms ease;
+  border: 1px solid transparent;
+}
+
+.contact-actions .btn.primary {
+  background: linear-gradient(135deg, #38bdf8, #22d3ee);
+  color: #0b1220;
+  box-shadow: 0 12px 30px rgba(34, 211, 238, 0.3);
+  border-color: rgba(34, 211, 238, 0.6);
+}
+
+.contact-actions .btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px rgba(34, 211, 238, 0.45);
+}
+
+.contact-actions .btn.ghost {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+.contact-actions .btn.ghost:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.55);
+  color: #67e8f9;
+}
+
+.contact-email-bare {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 72px 18px;
+  }
 }

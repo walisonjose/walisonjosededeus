@@ -10,12 +10,10 @@ function CTDIESummary({ embedded = false }: Props) {
   return (
     <ExpandableHighlight
       id="ctdie"
-    //   eyebrow="Honra · CBIE 2012"
-     title=""
-    //   subtitle="Concurso de TCC, Dissertações e Teses do 1º Congresso Brasileiro de Informática na Educação."
-    //   meta="Concedido por: Congresso Brasileiro de Informática na Educação · dez/2012"
+      title=""
       icon={<EmojiEventsRoundedIcon fontSize="small" />}
-      summaryLabel="Saiba mais"
+      summaryLabel="Sobre o CTD-IE"
+      teaser="Entenda o processo seletivo do prêmio e o que representa essa conquista."
       embedded={embedded}
       body={(
         <>

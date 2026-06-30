@@ -20,17 +20,20 @@ import '../assets/styles/Navigation.scss';
 
 const drawerWidth = 260;
 const navItems = [
-  ['Skills', 'expertise'],
-  // ['Certificações', 'certifications'],
-  // ['Honors', 'honors'],
-  // ['CTD-IE', 'ctdie'],
-  ['Carreira', 'history'],
+  ['Stacks', 'expertise'],
   ['Projetos', 'projects'],
+  ['Carreira', 'history'],
+  ['Publicações', 'honors'],
 ];
 
-function Navigation({parentToChild, modeChange}: any) {
+type NavigationProps = {
+  parentToChild: { mode: string };
+  modeChange: () => void;
+};
 
-  const {mode} = parentToChild;
+function Navigation({ parentToChild, modeChange }: NavigationProps) {
+
+  const { mode } = parentToChild;
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -79,11 +82,11 @@ function Navigation({parentToChild, modeChange}: any) {
             </ListItemButton>
           </ListItem>
         ))}
-        <ListItem disablePadding>
+        {/* <ListItem disablePadding>
           <ListItemButton component="a" href="https://www.linkedin.com/in/walisonjosededeus/" target="_blank" sx={{ textAlign: 'center' }}>
             <ListItemText primary="LinkedIn" />
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
       </List>
     </Box>
   );
@@ -95,7 +98,7 @@ function Navigation({parentToChild, modeChange}: any) {
         <Toolbar className='navigation-bar'>
           <div className="nav-brand" onClick={() => scrollToSection('top')} role="button" aria-label="Voltar ao topo">
             <HomeRoundedIcon className="home-icon" fontSize="small" />
-           
+            <span className="brand-text">Inicio</span>
           </div>
 
           <Box className="nav-links" sx={{ display: { xs: 'none', sm: 'flex' } }}>
@@ -104,15 +107,21 @@ function Navigation({parentToChild, modeChange}: any) {
                 {item[0]}
               </Button>
             ))}
+            {/* <Button
+              className="nav-cta"
+              component="a"
+              href="https://www.linkedin.com/in/walisonjosededeus/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </Button> */}
           </Box>
 
           <div className="nav-actions">
-            {/* <IconButton className="mode-toggle" onClick={() => modeChange()} aria-label="Alternar tema">
+            <IconButton className="mode-toggle" onClick={() => modeChange()} aria-label="Alternar tema">
               {mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
-            </IconButton> */}
-            {/* <Button className="nav-cta" href="https://www.linkedin.com/in/walisonjosededeus/" target="_blank" rel="noreferrer">
-              LinkedIn
-            </Button> */}
+            </IconButton>
             <IconButton
               color="inherit"
               aria-label="open drawer"

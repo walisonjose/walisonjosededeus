@@ -10,6 +10,7 @@ export type HighlightProps = {
   meta?: string;
   icon?: React.ReactNode;
   summaryLabel?: string;
+  teaser?: string;
   body: React.ReactNode;
   embedded?: boolean;
 };
@@ -22,6 +23,7 @@ function ExpandableHighlight({
   meta,
   icon,
   summaryLabel = "Ver detalhes",
+  teaser,
   body,
   embedded = false,
 }: HighlightProps) {
@@ -45,9 +47,12 @@ function ExpandableHighlight({
           </div>
         )}
 
+        {teaser && <p className="highlight-teaser">{teaser}</p>}
+
         <details>
           <summary>
-            <span>{summaryLabel}</span>
+            {!meta && icon && <div className="summary-icon">{icon}</div>}
+            <span className="summary-label">{summaryLabel}</span>
             <ExpandMoreRoundedIcon className="chevron" fontSize="small" />
           </summary>
           <div className="highlight-body">

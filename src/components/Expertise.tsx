@@ -1,7 +1,8 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faDocker, faNode } from '@fortawesome/free-brands-svg-icons';
+import { faMobile } from '@fortawesome/free-solid-svg-icons';
 import '../assets/styles/Expertise.scss';
 
 type SkillCard = {
@@ -9,34 +10,30 @@ type SkillCard = {
     subtitle: string;
     description: string;
     tags: string[];
-    icon: typeof faReact;
-    accent: string;
+    icon: typeof faReact
 };
 
 const skills: SkillCard[] = [
     {
-        title: "React Native & Web",
-        subtitle: "Apps mobile e portais",
-        description: "7+ anos com React Native e React entregando produtos performáticos, acessíveis e preparados para escala.",
-        tags: ["React Native", "React", "JavaScript", "TypeScript", "Expo", "Java"],
-        icon: faReact,
-        accent: "#38bdf8",
+        title: "React Native",
+        subtitle: "Apps iOS e Android",
+        description: "Experiência consolidada com React Native e Expo em apps de loyalty (Fidela, Cogny), mobilidade urbana (Siga Aparecida) e saúde (INGOH). Publicação e sustentação contínua nas lojas App Store e Google Play.",
+        tags: ["React Native", "Expo", "TypeScript", "iOS", "Android", "Redux", "Firebase"],
+        icon: faMobile
+    },
+    {
+        title: "React & Node.js",
+        subtitle: "Frontend e backend",
+        description: "Portais web e APIs em produção para o setor de loyalty com React, Next.js e Node.js. Integrações com Firebase, Salesforce e ecossistemas de fidelidade.",
+        tags: ["React", "Node.js", "Firebase", "TypeScript", "Salesforce", "REST"],
+        icon: faNode
     },
     {
         title: "Infra & Linux",
-        subtitle: "SysAdmin e observabilidade",
-        description: "3+ anos administrando Linux, deploy de serviços e otimização de ambientes para disponibilidade e segurança.",
-        tags: ["Linux", "Docker", "Nginx/Apache", "Monitoramento", "CI/CD", "Shell"],
+        subtitle: "SysAdmin e DevOps",
+        description: "4+ anos como SysAdmin Linux no projeto Tainacan/UFG: Docker, Kubernetes, Nginx, pipelines CI/CD, backup com Bacula e monitoramento de infraestrutura de produção.",
+        tags: ["Linux", "Docker", "Kubernetes", "Nginx", "CI/CD", "Shell", "Bacula"],
         icon: faDocker,
-        accent: "#22d3ee",
-    },
-    {
-        title: "Loyalty & Sustentação",
-        subtitle: "Estabilidade e performance",
-        description: "Atuação diária em diagnóstico e correção de bugs, hardening de performance e melhoria contínua em produtos de loyalty.",
-        tags: ["Loyalty", "Bugfix", "Performance", "Observabilidade", "Suporte", "Melhoria contínua"],
-        icon: faPython,
-        accent: "#a3e635",
     },
 ];
 
@@ -44,18 +41,19 @@ function Expertise() {
     return (
         <section className="expertise-section" id="expertise">
             <div className="expertise-header">
-                <span className="eyebrow">Skills</span>
-                {/* <div>
-                    <h1>Stack e especialidades</h1>
-                    {/* <p>Loyalty, mobile, web e infra: sustentação, performance e produtos prontos para o negócio.</p> 
-                </div> */}
+                {/* <span className="eyebrow">Skills</span> */}
+                <div>
+                    <h1>Stacks</h1>
+                    {/* <p>Mobile, web e infra: produtos robustos e estáveis do frontend ao servidor.</p> */}
+                </div>
             </div>
 
             <div className="skills-grid">
                 {skills.map((skill) => (
-                    <article className="skill-card" key={skill.title} style={{ ['--accent' as string]: skill.accent }}>
-                        <div className="icon-badge">
-                            <FontAwesomeIcon icon={skill.icon} size="2x" />
+                    <article className="skill-card" key={skill.title}>
+                        <div className="skill-icon"
+                         >
+                            <FontAwesomeIcon icon={skill.icon} size="4x" />
                         </div>
                         <div className="skill-copy">
                             <h3>{skill.title}</h3>

@@ -46,6 +46,17 @@
     font-size: 18px;
 }
 
+.hero-copy .lede strong {
+    color: #67e8f9;
+    font-weight: 600;
+}
+
+.hero-copy .lede em {
+    font-style: normal;
+    color: #a5f3fc;
+}
+
+
 .hero-meta {
     display: flex;
     gap: 10px;
@@ -68,6 +79,35 @@
 .badge.ghost {
     background: rgba(148, 163, 184, 0.15);
     border-color: rgba(148, 163, 184, 0.35);
+}
+
+.hero-available {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    color: #86efac;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.available-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25); }
+    50% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.1); }
 }
 
 .hero-actions {
@@ -162,8 +202,8 @@
 
 .avatar-ring {
     position: relative;
-    width: 220px;
-    height: 220px;
+    width: 308px;
+    height: 308px;
     border-radius: 50%;
     padding: 8px;
     background: linear-gradient(135deg, #38bdf8, #22d3ee);
@@ -210,7 +250,7 @@
     }
 
     .avatar-ring {
-        width: 180px;
-        height: 180px;
+        width: 394px;
+        height: 394px;
     }
 }
