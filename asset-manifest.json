@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/walisonjosededeus/static/css/main.bc4f221c.css",
+    "main.css": "/walisonjosededeus/static/css/main.9a2df8e8.css",
     "main.js": "/walisonjosededeus/static/js/main.874be2a2.js",
     "static/js/453.e7f01505.chunk.js": "/walisonjosededeus/static/js/453.e7f01505.chunk.js",
     "static/media/profile.jpg": "/walisonjosededeus/static/media/profile.312eb0a6d37e01124aa4.jpg",
@@ -11,12 +11,12 @@
     "static/media/tainacan_logo.svg": "/walisonjosededeus/static/media/tainacan_logo.58cc4cc029f0fb008c6f7d2d12984fdd.svg",
     "static/media/acessa_agro.svg": "/walisonjosededeus/static/media/acessa_agro.b4532484e64abdfe3e14a2a0e19d91b1.svg",
     "index.html": "/walisonjosededeus/index.html",
-    "main.bc4f221c.css.map": "/walisonjosededeus/static/css/main.bc4f221c.css.map",
+    "main.9a2df8e8.css.map": "/walisonjosededeus/static/css/main.9a2df8e8.css.map",
     "main.874be2a2.js.map": "/walisonjosededeus/static/js/main.874be2a2.js.map",
     "453.e7f01505.chunk.js.map": "/walisonjosededeus/static/js/453.e7f01505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc4f221c.css",
+    "static/css/main.9a2df8e8.css",
     "static/js/main.874be2a2.js"
   ]
 }
