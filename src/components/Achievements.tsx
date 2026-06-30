@@ -28,7 +28,7 @@ const publications: Item[] = [
     tags: ["Java", "Agentes", "IA"],
   },
   {
-    title: "Processos de comunicação entre agentes assistentes para o sistema AgenTCC",
+    title: "Processos de comunicação entre agentes inteligentes para o sistema AgenTCC",
     link: `${PUBLIC}/docs/1820-2868-1-SM.pdf`,
     tags: ["AgenTCC", "Comunicação", "Assistentes"],
   },

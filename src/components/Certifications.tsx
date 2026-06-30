@@ -19,13 +19,13 @@ const certs: Certification[] = [
     tags: ["Engenharia", "Sistemas críticos"],
   },
   {
-    title: "Linux Security Servers in Cloud",
+    title: "Linux Security – Servers in Cloud",
     institution: "",
     year: undefined,
     tags: ["Linux", "Segurança", "Cloud"],
   },
   {
-    title: "Desafio: Agentes de IA com N8N na Prática",
+    title: "Desafio: Agentes de IA com n8n na Prática",
     institution: "",
     year: undefined,
     tags: ["IA", "Automação", "n8n"],

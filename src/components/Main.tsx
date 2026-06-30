@@ -11,14 +11,14 @@ function Main() {
     <section className="hero">
       <div className="hero-grid">
         <div className="hero-copy">
-          <div className="eyebrow">Desenvolvedor Mobile · React Native · React</div>
+          <div className="eyebrow">Desenvolvedor Mobile SR · React Native · React</div>
           <h1>Walison J. Deus</h1>
           <p className="lede">
-            Desenvolvedor <strong>React Native</strong> e <strong>React</strong> focado na criação, sustentação e evolução de
-            produtos digitais — apps mobile e portais web — com forte ênfase no setor de <em>loyalty</em>.
-            Rotina voltada ao diagnóstico de bugs, ganhos de performance e melhorias contínuas que asseguram
-            estabilidade das soluções. Trajetória complementada por +3 anos como administrador Linux,
-            com vivência em Docker, microsserviços e infraestrutura de produção.
+            Desenvolvedor <strong>React Native</strong> e <strong>React</strong> com vivência em produtos dos segmentos de
+            <em> loyalty</em>, mobilidade urbana, saúde e cultura — atuando desde a concepção até a publicação nas lojas,
+            com evolução contínua, integrações e ganhos de performance. Rotina voltada ao diagnóstico de bugs e
+            decisões de arquitetura que asseguram estabilidade das soluções. Trajetória complementada por +4 anos
+            como administrador Linux, com vivência em Docker, microsserviços e infraestrutura de produção.
           </p>
 
           <div className="hero-meta">

@@ -18,14 +18,14 @@ const skills: SkillCard[] = [
         title: "React Native",
         subtitle: "Apps iOS e Android",
         description: "Experiência consolidada com React Native e Expo em apps de loyalty (Fidela, Cogny), mobilidade urbana (Siga Aparecida) e saúde (INGOH). Publicação e sustentação contínua nas lojas App Store e Google Play.",
-        tags: ["React Native", "Expo", "TypeScript", "iOS", "Android", "Redux", "Firebase"],
+        tags: ["React Native", "Expo", "TypeScript", "iOS", "Android", "Java", "Zustand", "Firebase"],
         icon: faMobile
     },
     {
         title: "React & Node.js",
         subtitle: "Frontend e backend",
         description: "Portais web e APIs em produção para o setor de loyalty com React, Next.js e Node.js. Integrações com Firebase, Salesforce e ecossistemas de fidelidade.",
-        tags: ["React", "Node.js", "Firebase", "TypeScript", "Salesforce", "REST"],
+        tags: ["React", "Node.js", "Ruby on Rails", "Firebase", "TypeScript", "Salesforce", "REST"],
         icon: faNode
     },
     {
